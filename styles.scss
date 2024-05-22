@@ -1,2 +1,155 @@
 @use './styles/root';
 @use './styles/' as *;
+
+body {
+	background-color: var(--clr-neutral-blue-veryDark);
+	font-family: var(--ff-primary-rubik);
+	font-optical-sizing: auto;
+	font-style: normal;
+
+	main {
+		min-height: 100vh;
+		width: 100%;
+	}
+}
+
+.dashboard {
+	padding: 5.0625rem 1.5rem;
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+
+		.user {
+			background-color: var(--clr-neutral-blue-dark);
+			border-radius: 15px;
+
+			.profile {
+				padding: 2.1875rem 2rem 2.125rem;
+				display: flex;
+				align-items: center;
+				gap: 1.25rem;
+				background-color: var(--clr-primary-blue);
+				border-radius: 15px;
+
+				img {
+					height: 64px;
+					width: 64px;
+					border: 3px solid var(--clr-neutral-white);
+					border-radius: 100%;
+				}
+
+				div {
+					p {
+						margin-bottom: 0.25rem;
+						font-size: var(--fs-p-md);
+						font-weight: var(--fw-regular);
+						color: var(--clr-neutral-blue-pale);
+					}
+
+					h1 {
+						font-size: var(--fs-h1-sm);
+						font-weight: var(--fw-light);
+						color: var(--clr-neutral-white);
+					}
+				}
+			}
+
+			.filters {
+				padding: 1.5rem 0;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+
+				.filter {
+					font-size: var(--fs-li-md);
+					font-weight: var(--fw-regular);
+					color: var(--clr-neutral-blue-desat);
+				}
+
+				.active {
+					color: var(--clr-neutral-white);
+				}
+			}
+		}
+
+		.card {
+			position: relative;
+			padding-top: 2.375rem;
+			border-radius: 15px;
+			-webkit-mask-image: -webkit-radial-gradient(white, black);
+			mask-image: -webkit-radial-gradient(white, black);
+
+			.icon {
+				position: absolute;
+				right: 5.3272%;
+				top: -6.8188%;
+			}
+
+			.content {
+				position: relative;
+				padding: 1.75rem 1.5rem;
+				background-color: var(--clr-neutral-blue-dark);
+				border-radius: 15px 15px 13px 13px;
+
+				.category {
+					margin-bottom: 0.375rem;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					h2 {
+						font-size: var(--fs-h2-md);
+						font-weight: var(--fw-medium);
+						line-height: 1.2223;
+						color: var(--clr-neutral-white);
+					}
+				}
+
+				.data {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					h3 {
+						font-size: var(--fs-h3-sm);
+						font-weight: var(--fw-light);
+						line-height: 1.1875;
+						color: var(--clr-neutral-white);
+					}
+
+					p {
+						font-size: var(--fs-p-md);
+						font-weight: var(--fw-regular);
+						color: var(--clr-neutral-blue-pale);
+					}
+				}
+			}
+		}
+	}
+}
+
+#work {
+	background-color: var(--clr-primary-red-light);
+}
+
+#play {
+	background-color: var(--clr-primary-blue-light);
+}
+
+#study {
+	background-color: var(--clr-primary-red);
+}
+
+#exercise {
+	background-color: var(--clr-primary-green);
+}
+
+#social {
+	background-color: var(--clr-primary-violet);
+}
+
+#selfCare {
+	background-color: var(--clr-primary-orange);
+}

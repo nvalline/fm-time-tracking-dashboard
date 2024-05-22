@@ -26,85 +26,144 @@
 	</head>
 	<body>
 		<main>
-			<section>
-				<article>
-					<div>
-						<img src="./images/image-jeremy.png" alt="jeremy robson" />
-						<div>
-							<p>Report for</p>
-							<h1>Jeremy Robson</h1>
-						</div>
-					</div>
-					<ul>
-						<li>Daily</li>
-						<li>Weekly</li>
-						<li>Monthly</li>
-					</ul>
-				</article>
-				<div>
-					<ul>
-						<li>
+			<section class="dashboard">
+				<ul class="cards">
+					<!-- User Card -->
+					<li class="user">
+						<div class="profile">
+							<img
+								src="./images/image-jeremy.png"
+								alt="jeremy robson"
+								height="78"
+								width="78"
+							/>
 							<div>
-								<div>
-									<h2>Work</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+								<p>Report for</p>
+								<h1>Jeremy Robson</h1>
+							</div>
+						</div>
+						<ul class="filters">
+							<li><p class="filter">Daily</p></li>
+							<li><p class="filter active">Weekly</p></li>
+							<li><p class="filter">Monthly</p></li>
+						</ul>
+					</li>
+					<!-- Data Cards -->
+					<li id="work" class="card">
+						<img
+							src="./images/icon-work.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Work</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>32</span>hrs</h3>
 								<p>Last Week - <span>36</span>hrs</p>
 							</div>
-						</li>
-						<li>
-							<div>
-								<div>
-									<h2>Play</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+						</div>
+					</li>
+					<li id="play" class="card">
+						<img
+							src="./images/icon-play.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Play</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>10</span>hrs</h3>
 								<p>Last Week - <span>8</span>hrs</p>
 							</div>
-						</li>
-						<li>
-							<div>
-								<div>
-									<h2>Study</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+						</div>
+					</li>
+					<li id="study" class="card">
+						<img
+							src="./images/icon-study.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Study</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>4</span>hrs</h3>
 								<p>Last Week - <span>7</span>hrs</p>
 							</div>
-						</li>
-						<li>
-							<div>
-								<div>
-									<h2>Exercise</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+						</div>
+					</li>
+					<li id="exercise" class="card">
+						<img
+							src="./images/icon-exercise.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Exercise</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>4</span>hrs</h3>
 								<p>Last Week - <span>5</span>hrs</p>
 							</div>
-						</li>
-						<li>
-							<div>
-								<div>
-									<h2>Social</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+						</div>
+					</li>
+					<li id="social" class="card">
+						<img
+							src="./images/icon-social.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Social</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>5</span>hrs</h3>
 								<p>Last Week - <span>10</span>hrs</p>
 							</div>
-						</li>
-						<li>
-							<div>
-								<div>
-									<h2>Self Care</h2>
-									<img src="./images/icon-ellipsis.svg" alt="" />
-								</div>
+						</div>
+					</li>
+					<li id="selfCare" class="card">
+						<img
+							src="./images/icon-self-care.svg"
+							alt=""
+							height="78"
+							width="78"
+							class="icon"
+						/>
+						<div class="content">
+							<div class="category">
+								<h2>Self Care</h2>
+								<img src="./images/icon-ellipsis.svg" alt="" />
+							</div>
+							<div class="data">
 								<h3><span>2</span>hrs</h3>
 								<p>Last Week - <span>2</span>hrs</p>
 							</div>
-						</li>
-					</ul>
-				</div>
+						</div>
+					</li>
+				</ul>
 			</section>
 		</main>
 	</body>

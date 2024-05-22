@@ -11,6 +11,7 @@
   --clr-neutral-blue-dark: hsl(235, 46%, 20%);
   --clr-neutral-blue-desat: hsl(235, 45%, 61%);
   --clr-neutral-blue-pale: hsl(236, 100%, 87%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
   /* Loop to declare font family variables */
   --ff-primary-rubik: 'Rubik', sans-serif;
   /* Loop to declare font size variables */
@@ -108,4 +109,137 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: var(--clr-neutral-blue-veryDark);
+  font-family: var(--ff-primary-rubik);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.dashboard {
+  padding: 5.0625rem 1.5rem;
+}
+.dashboard .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.dashboard .cards .user {
+  background-color: var(--clr-neutral-blue-dark);
+  border-radius: 15px;
+}
+.dashboard .cards .user .profile {
+  padding: 2.1875rem 2rem 2.125rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: var(--clr-primary-blue);
+  border-radius: 15px;
+}
+.dashboard .cards .user .profile img {
+  height: 64px;
+  width: 64px;
+  border: 3px solid var(--clr-neutral-white);
+  border-radius: 100%;
+}
+.dashboard .cards .user .profile div p {
+  margin-bottom: 0.25rem;
+  font-size: var(--fs-p-md);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-blue-pale);
+}
+.dashboard .cards .user .profile div h1 {
+  font-size: var(--fs-h1-sm);
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-white);
+}
+.dashboard .cards .user .filters {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.dashboard .cards .user .filters .filter {
+  font-size: var(--fs-li-md);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-blue-desat);
+}
+.dashboard .cards .user .filters .active {
+  color: var(--clr-neutral-white);
+}
+.dashboard .cards .card {
+  position: relative;
+  padding-top: 2.375rem;
+  border-radius: 15px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+          mask-image: -webkit-radial-gradient(white, black);
+}
+.dashboard .cards .card .icon {
+  position: absolute;
+  right: 5.3272%;
+  top: -6.8188%;
+}
+.dashboard .cards .card .content {
+  position: relative;
+  padding: 1.75rem 1.5rem;
+  background-color: var(--clr-neutral-blue-dark);
+  border-radius: 15px 15px 13px 13px;
+}
+.dashboard .cards .card .content .category {
+  margin-bottom: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .cards .card .content .category h2 {
+  font-size: var(--fs-h2-md);
+  font-weight: var(--fw-medium);
+  line-height: 1.2223;
+  color: var(--clr-neutral-white);
+}
+.dashboard .cards .card .content .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .cards .card .content .data h3 {
+  font-size: var(--fs-h3-sm);
+  font-weight: var(--fw-light);
+  line-height: 1.1875;
+  color: var(--clr-neutral-white);
+}
+.dashboard .cards .card .content .data p {
+  font-size: var(--fs-p-md);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-blue-pale);
+}
+
+#work {
+  background-color: var(--clr-primary-red-light);
+}
+
+#play {
+  background-color: var(--clr-primary-blue-light);
+}
+
+#study {
+  background-color: var(--clr-primary-red);
+}
+
+#exercise {
+  background-color: var(--clr-primary-green);
+}
+
+#social {
+  background-color: var(--clr-primary-violet);
+}
+
+#selfCare {
+  background-color: var(--clr-primary-orange);
 }/*# sourceMappingURL=styles.css.map */
