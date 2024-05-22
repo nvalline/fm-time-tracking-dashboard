@@ -1,0 +1,111 @@
+:root {
+  /* Loop to declare color variables */
+  --clr-primary-blue: hsl(246, 80%, 60%);
+  --clr-primary-blue-light: hsl(195, 74%, 62%);
+  --clr-primary-green: hsl(145, 58%, 55%);
+  --clr-primary-orange: hsl(43, 84%, 65%);
+  --clr-primary-red: hsl(348, 100%, 68%);
+  --clr-primary-red-light: hsl(15, 100%, 70%);
+  --clr-primary-violet: hsl(264, 64%, 52%);
+  --clr-neutral-blue-veryDark: hsl(226, 43%, 10%);
+  --clr-neutral-blue-dark: hsl(235, 46%, 20%);
+  --clr-neutral-blue-desat: hsl(235, 45%, 61%);
+  --clr-neutral-blue-pale: hsl(236, 100%, 87%);
+  /* Loop to declare font family variables */
+  --ff-primary-rubik: 'Rubik', sans-serif;
+  /* Loop to declare font size variables */
+  --fs-h1-lg: 2.5rem;
+  --fs-h1-sm: 1.5rem;
+  --fs-h2-md: 1.125rem;
+  --fs-h3-lg: 3.5rem;
+  --fs-h3-sm: 2rem;
+  --fs-p-md: 0.9375rem;
+  --fs-li-md: 1.125rem;
+  /* Loop to declare font weight variables */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove Default Spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.2;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}/*# sourceMappingURL=styles.css.map */

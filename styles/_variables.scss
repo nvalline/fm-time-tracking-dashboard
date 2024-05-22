@@ -1,0 +1,59 @@
+// ----- Colors -----
+
+$colors: (
+	primary: (
+		blue: hsl(246, 80%, 60%),
+		//play
+		blue-light: hsl(195, 74%, 62%),
+		//exercise
+		green: hsl(145, 58%, 55%),
+		//self care
+		orange: hsl(43, 84%, 65%),
+		//study
+		red: hsl(348, 100%, 68%),
+		//work
+		red-light: hsl(15, 100%, 70%),
+		//social
+		violet: hsl(264, 64%, 52%)
+	),
+	neutral: (
+		blue-veryDark: hsl(226, 43%, 10%),
+		blue-dark: hsl(235, 46%, 20%),
+		blue-desat: hsl(235, 45%, 61%),
+		blue-pale: hsl(236, 100%, 87%)
+	)
+);
+
+// ----- Typography -----
+
+$font-families: (
+	primary: (
+		rubik: "'Rubik', sans-serif"
+	)
+);
+
+$font-sizes: (
+	h1: (
+		lg: 2.5rem,
+		sm: 1.5rem
+	),
+	h2: (
+		md: 1.125rem
+	),
+	h3: (
+		lg: 3.5rem,
+		sm: 2rem
+	),
+	p: (
+		md: 0.9375rem
+	),
+	li: (
+		md: 1.125rem
+	)
+);
+
+$font-weights: (
+	light: 300,
+	regular: 400,
+	medium: 500
+);

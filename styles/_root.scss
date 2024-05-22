@@ -1,0 +1,29 @@
+@use './variables' as *;
+
+:root {
+	/* Loop to declare color variables */
+	@each $color-type, $shade in $colors {
+		@each $color, $value in $shade {
+			--clr-#{$color-type}-#{$color}: #{$value};
+		}
+	}
+
+	/* Loop to declare font family variables */
+	@each $font-type, $type in $font-families {
+		@each $font, $value in $type {
+			--ff-#{$font-type}-#{$font}: #{$value};
+		}
+	}
+
+	/* Loop to declare font size variables */
+	@each $font-type, $type in $font-sizes {
+		@each $size, $value in $type {
+			--fs-#{$font-type}-#{$size}: #{$value};
+		}
+	}
+
+	/* Loop to declare font weight variables */
+	@each $weight, $value in $font-weights {
+		--fw-#{$weight}: #{$value};
+	}
+}
