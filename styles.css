@@ -128,11 +128,23 @@ body main {
 .dashboard .cards {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   gap: 1.5rem;
 }
+@media (min-width: 40em) {
+  .dashboard .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .dashboard .cards .user {
+  max-width: 327px;
   background-color: var(--clr-neutral-blue-dark);
   border-radius: 15px;
+}
+@media (min-width: 40em) {
+  .dashboard .cards .user {
+    grid-column: 1/3;
+  }
 }
 .dashboard .cards .user .profile {
   padding: 2.1875rem 2rem 2.125rem;
@@ -176,6 +188,8 @@ body main {
 .dashboard .cards .card {
   position: relative;
   padding-top: 2.375rem;
+  width: 100%;
+  max-width: 327px;
   border-radius: 15px;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
           mask-image: -webkit-radial-gradient(white, black);
