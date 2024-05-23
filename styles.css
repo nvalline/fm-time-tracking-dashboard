@@ -12,6 +12,7 @@
   --clr-neutral-blue-desat: hsl(235, 45%, 61%);
   --clr-neutral-blue-pale: hsl(236, 100%, 87%);
   --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-shadow-black: hsla(0, 0%, 0%, 0.25);
   /* Loop to declare font family variables */
   --ff-primary-rubik: 'Rubik', sans-serif;
   /* Loop to declare font size variables */
@@ -125,6 +126,14 @@ body main {
 .dashboard {
   padding: 5.0625rem 1.5rem;
 }
+@media (min-width: 54.375em) {
+  .dashboard {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .dashboard .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -134,6 +143,12 @@ body main {
 @media (min-width: 40em) {
   .dashboard .cards {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 54.375em) {
+  .dashboard .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.875rem;
   }
 }
 .dashboard .cards .user {
@@ -146,6 +161,16 @@ body main {
     grid-column: 1/3;
   }
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .user {
+    grid-column: 1;
+    grid-row: 1/4;
+    max-width: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 .dashboard .cards .user .profile {
   padding: 2.1875rem 2rem 2.125rem;
   display: flex;
@@ -154,11 +179,27 @@ body main {
   background-color: var(--clr-primary-blue);
   border-radius: 15px;
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .user .profile {
+    padding: 2.3125rem 2rem;
+    height: 68.34%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.6875rem;
+  }
+}
 .dashboard .cards .user .profile img {
   height: 64px;
   width: 64px;
   border: 3px solid var(--clr-neutral-white);
   border-radius: 100%;
+}
+@media (min-width: 54.375em) {
+  .dashboard .cards .user .profile img {
+    height: 78px;
+    width: 78px;
+    box-shadow: 0 4px 4px var(--clr-shadow-black);
+  }
 }
 .dashboard .cards .user .profile div p {
   margin-bottom: 0.25rem;
@@ -171,11 +212,24 @@ body main {
   font-weight: var(--fw-light);
   color: var(--clr-neutral-white);
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .user .profile div h1 {
+    font-size: var(--fs-h1-lg);
+  }
+}
 .dashboard .cards .user .filters {
   padding: 1.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+@media (min-width: 54.375em) {
+  .dashboard .cards .user .filters {
+    padding: 1.625rem 2rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3125rem;
+  }
 }
 .dashboard .cards .user .filters .filter {
   font-size: var(--fs-li-md);
@@ -194,6 +248,12 @@ body main {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
           mask-image: -webkit-radial-gradient(white, black);
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .card {
+    padding-top: 2.8125rem;
+    max-width: 255px;
+  }
+}
 .dashboard .cards .card .icon {
   position: absolute;
   right: 5.3272%;
@@ -205,11 +265,21 @@ body main {
   background-color: var(--clr-neutral-blue-dark);
   border-radius: 15px 15px 13px 13px;
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .card .content {
+    padding: 1.8125rem 1.875rem 2rem;
+  }
+}
 .dashboard .cards .card .content .category {
   margin-bottom: 0.375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 54.375em) {
+  .dashboard .cards .card .content .category {
+    margin-bottom: 1.5rem;
+  }
 }
 .dashboard .cards .card .content .category h2 {
   font-size: var(--fs-h2-md);
@@ -222,11 +292,23 @@ body main {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 54.375em) {
+  .dashboard .cards .card .content .data {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
 .dashboard .cards .card .content .data h3 {
   font-size: var(--fs-h3-sm);
   font-weight: var(--fw-light);
   line-height: 1.1875;
   color: var(--clr-neutral-white);
+}
+@media (min-width: 54.375em) {
+  .dashboard .cards .card .content .data h3 {
+    font-size: var(--fs-h3-lg);
+  }
 }
 .dashboard .cards .card .content .data p {
   font-size: var(--fs-p-md);
