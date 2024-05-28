@@ -237,6 +237,9 @@ body main {
   align-items: center;
   justify-content: space-evenly;
 }
+.dashboard .cards .user .filters[role=tablist] [aria-selected=true] {
+  color: var(--clr-neutral-white);
+}
 @media (min-width: 54.375em) {
   .dashboard .cards .user .filters {
     padding: 1.625rem 2rem 2rem;
@@ -248,9 +251,10 @@ body main {
 .dashboard .cards .user .filters .filter {
   font-size: var(--fs-li-md);
   font-weight: var(--fw-regular);
+  text-decoration: none;
   color: var(--clr-neutral-blue-desat);
 }
-.dashboard .cards .user .filters .active {
+.dashboard .cards .user .filters .filter:hover, .dashboard .cards .user .filters .filter:focus {
   color: var(--clr-neutral-white);
 }
 .dashboard .cards .card {

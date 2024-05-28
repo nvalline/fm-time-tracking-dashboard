@@ -25,7 +25,7 @@
 		/>
 
 		<!-- Scripts -->
-		<script defer src="script.js"></script>
+		<script defer src="script.js" type="module"></script>
 	</head>
 	<body>
 		<main>
@@ -45,10 +45,25 @@
 								<h1>Jeremy Robson</h1>
 							</div>
 						</div>
-						<ul class="filters">
-							<li><p class="filter">Daily</p></li>
-							<li><p class="filter active">Weekly</p></li>
-							<li><p class="filter">Monthly</p></li>
+						<ul role="tablist" class="filters">
+							<li role="presentation">
+								<a role="tab" href="#daily" id="daily" class="filter">Daily</a>
+							</li>
+							<li role="presentation">
+								<a
+									role="tab"
+									href="#weekly"
+									id="weekly"
+									aria-selected="true"
+									class="filter"
+									>Weekly</a
+								>
+							</li>
+							<li role="presentation">
+								<a role="tab" href="#monthly" id="monthly" class="filter"
+									>Monthly</a
+								>
+							</li>
 						</ul>
 					</li>
 					<!-- Data Cards -->

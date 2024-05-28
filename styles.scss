@@ -123,6 +123,10 @@ body {
 				align-items: center;
 				justify-content: space-evenly;
 
+				&[role='tablist'] [aria-selected='true'] {
+					color: var(--clr-neutral-white);
+				}
+
 				@media (min-width: 54.375em) {
 					padding: 1.625rem 2rem 2rem;
 					flex-direction: column;
@@ -133,11 +137,13 @@ body {
 				.filter {
 					font-size: var(--fs-li-md);
 					font-weight: var(--fw-regular);
+					text-decoration: none;
 					color: var(--clr-neutral-blue-desat);
-				}
 
-				.active {
-					color: var(--clr-neutral-white);
+					&:hover,
+					&:focus {
+						color: var(--clr-neutral-white);
+					}
 				}
 			}
 		}
