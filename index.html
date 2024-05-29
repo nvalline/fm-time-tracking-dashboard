@@ -30,7 +30,7 @@
 	<body>
 		<main>
 			<section class="dashboard">
-				<ul class="cards">
+				<ul id="panelList" class="cards">
 					<!-- User Card -->
 					<li class="user">
 						<div class="profile">
@@ -45,29 +45,22 @@
 								<h1>Jeremy Robson</h1>
 							</div>
 						</div>
-						<ul role="tablist" class="filters">
+						<ul role="tablist" class="tablist">
 							<li role="presentation">
-								<a role="tab" href="#daily" id="daily" class="filter">Daily</a>
+								<a role="tab" href="#daily" id="daily" class="tab">Daily</a>
 							</li>
 							<li role="presentation">
-								<a
-									role="tab"
-									href="#weekly"
-									id="weekly"
-									aria-selected="true"
-									class="filter"
-									>Weekly</a
-								>
+								<a role="tab" href="#weekly" id="weekly" class="tab">Weekly</a>
 							</li>
 							<li role="presentation">
-								<a role="tab" href="#monthly" id="monthly" class="filter"
+								<a role="tab" href="#monthly" id="monthly" class="tab"
 									>Monthly</a
 								>
 							</li>
 						</ul>
 					</li>
 					<!-- Data Cards -->
-					<li id="work" class="card">
+					<!-- <li id="work" class="card">
 						<img
 							src="./images/icon-work.svg"
 							alt=""
@@ -80,7 +73,7 @@
 								<h2>Work</h2>
 								<img src="./images/icon-ellipsis.svg" alt="" />
 							</div>
-							<div class="data">
+							<div id="workData" class="data">
 								<h3><span>32</span>hrs</h3>
 								<p>Last Week - <span>36</span>hrs</p>
 							</div>
@@ -180,7 +173,7 @@
 								<p>Last Week - <span>2</span>hrs</p>
 							</div>
 						</div>
-					</li>
+					</li> -->
 				</ul>
 			</section>
 		</main>

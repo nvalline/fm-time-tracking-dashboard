@@ -117,7 +117,7 @@ body {
 				}
 			}
 
-			.filters {
+			.tablist {
 				padding: 1.5rem 0;
 				display: flex;
 				align-items: center;
@@ -134,7 +134,7 @@ body {
 					gap: 1.3125rem;
 				}
 
-				.filter {
+				.tab {
 					font-size: var(--fs-li-md);
 					font-weight: var(--fw-regular);
 					text-decoration: none;
