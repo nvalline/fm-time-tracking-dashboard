@@ -11,12 +11,14 @@ const setPanel = (timeframe) => {
 	data.forEach(category => {
 		// console.log('TITLE', category.title)
 		// console.log('TIMEFRAME', category.timeframes)
+		const formattedTitle = category.title.toLowerCase().replace(/\s+/g, '-');
+		
 		const li = document.createElement('li')
 	
 		li.innerHTML = `
-				<li id="work" class="card">
+				<li id="${formattedTitle}" class="card">
 					<img
-						src="./images/icon-work.svg"
+						src="./images/icon-${formattedTitle}.svg"
 						alt=""
 						height="78"
 						width="78"
@@ -24,7 +26,7 @@ const setPanel = (timeframe) => {
 					/>
 					<div class="content">
 						<div class="category">
-							<h2>Work</h2>
+							<h2>${category.title}</h2>
 							<img src="./images/icon-ellipsis.svg" alt="" />
 						</div>
 						<div id="workData" class="data">
