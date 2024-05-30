@@ -7,14 +7,26 @@ console.log(data);
 const panelList = document.getElementById('panelList')
 
 const setPanel = (timeframe) => {
-	
+		
 	data.forEach(category => {
-		// console.log('TITLE', category.title)
-		// console.log('TIMEFRAME', category.timeframes)
 		const formattedTitle = category.title.toLowerCase().replace(/\s+/g, '-');
 		
 		const li = document.createElement('li')
-	
+
+		let previousText;
+		
+		switch(timeframe) {
+			case 'daily':
+				previousText = `Yesterday - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				break;
+			case 'weekly':
+				previousText = `Last Week - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				break;
+			case 'monthly':
+				previousText = `Last Month - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				break;
+		}
+ 	
 		li.innerHTML = `
 				<li id="${formattedTitle}" class="card">
 					<img
@@ -30,8 +42,8 @@ const setPanel = (timeframe) => {
 							<img src="./images/icon-ellipsis.svg" alt="" />
 						</div>
 						<div id="workData" class="data">
-							<h3><span>32</span>hrs</h3>
-							<p>Last Week - <span>36</span>hrs</p>
+							<h3><span>${category.timeframes[timeframe].current}</span>hrs</h3>
+							<p>${previousText}</p>
 						</div>
 					</div>
 				</li>
