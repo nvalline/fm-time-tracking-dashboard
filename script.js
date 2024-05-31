@@ -7,28 +7,31 @@ console.log(data);
 const panelList = document.getElementById('panelList')
 
 const setPanel = (timeframe) => {
-		
+	panelList.innerHTML = '';
+
 	data.forEach(category => {
 		const formattedTitle = category.title.toLowerCase().replace(/\s+/g, '-');
 		
 		const li = document.createElement('li')
 
+		li.setAttribute('id', formattedTitle);
+		li.classList.add('card');
+
 		let previousText;
 		
 		switch(timeframe) {
 			case 'daily':
-				previousText = `Yesterday - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				previousText = `Yesterday - ${category.timeframes[timeframe].previous}hrs`;
 				break;
 			case 'weekly':
-				previousText = `Last Week - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				previousText = `Last Week - ${category.timeframes[timeframe].previous}hrs`;
 				break;
 			case 'monthly':
-				previousText = `Last Month - <span>${category.timeframes[timeframe].previous}</span>hrs`;
+				previousText = `Last Month - ${category.timeframes[timeframe].previous}hrs`;
 				break;
 		}
  	
 		li.innerHTML = `
-				<li id="${formattedTitle}" class="card">
 					<img
 						src="./images/icon-${formattedTitle}.svg"
 						alt=""
@@ -42,13 +45,12 @@ const setPanel = (timeframe) => {
 							<img src="./images/icon-ellipsis.svg" alt="" />
 						</div>
 						<div id="workData" class="data">
-							<h3><span>${category.timeframes[timeframe].current}</span>hrs</h3>
+							<h3>${category.timeframes[timeframe].current}hrs</h3>
 							<p>${previousText}</p>
 						</div>
 					</div>
-				</li>
-			`;
-
+					`;
+					
 		panelList.appendChild(li);
 	})
 
