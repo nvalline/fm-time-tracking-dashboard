@@ -1,6 +1,4 @@
-import data from './data.json' with{ type: 'json' };
-
-console.log(data);
+import data from './data.json' with { type: 'json' };
 
 // ----- Data Handling -----
 
@@ -61,6 +59,7 @@ const setPanel = (timeframe) => {
 const tablist = document.querySelector('.tablist')
 const tabs = document.querySelectorAll('.tab');
 
+
 // The tab switching function
 const switchTab = (oldTab, newTab) => {
 	newTab.focus()
@@ -87,6 +86,32 @@ Array.prototype.forEach.call(tabs, (tab, i) => {
 
 		if(e.currentTarget !== currentTab) {
 			switchTab(currentTab, e.currentTarget)
+		}
+	})
+	
+	// Handle keydown events for keyboard users
+	tab.addEventListener('keydown', (e) => {
+		const deviceWidth = window.innerWidth;
+		let index = Array.prototype.indexOf.call(tabs, e.currentTarget);
+		let dir = '';
+		let layout = '';
+
+		// Set tab layout
+		if (deviceWidth < 870) {
+			layout = 'horizontal'
+		} else {
+			layout = 'vertical'
+		}
+
+		if (layout === 'horizontal') {
+			dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : null;
+		} else if (layout === 'vertical') {
+			dir = e.which === 38 ? index - 1 : e.which === 40 ? index + 1 : null;
+		}
+		
+		if (dir !== null) {
+			e.preventDefault();
+			tabs[dir] ? switchTab(e.currentTarget, tabs[dir]) : void 0;
 		}
 	})
 })
