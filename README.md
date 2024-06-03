@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Here](https://www.frontendmentor.io/solutions/tabbed-interface-vanilla-js-and-sass-p4ixoMvxqS)
 - Live Site URL: [Here](https://your-live-site-url.com)
 
 ## My process
@@ -43,6 +43,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Accessibility
 
 ### What I learned
 
