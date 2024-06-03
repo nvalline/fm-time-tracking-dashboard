@@ -42,7 +42,7 @@ const setPanel = (timeframe) => {
 							<h2>${category.title}</h2>
 							<img src="./images/icon-ellipsis.svg" alt="" />
 						</div>
-						<div id="workData" class="data">
+						<div class="data">
 							<h3>${category.timeframes[timeframe].current}hrs</h3>
 							<p>${previousText}</p>
 						</div>
