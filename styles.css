@@ -159,11 +159,16 @@ body main {
 @media (min-width: 54.375em) {
   .dashboard .user {
     margin: 0 auto;
-    max-height: 519px;
+    height: 513px;
     max-width: 255px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+@media (min-width: 73.375em) {
+  .dashboard .user {
+    height: 519px;
   }
 }
 .dashboard .user .profile {
