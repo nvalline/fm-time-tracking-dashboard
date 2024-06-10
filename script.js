@@ -40,7 +40,11 @@ const setPanel = (timeframe) => {
 					<div class="content">
 						<div class="category">
 							<h2>${category.title}</h2>
-							<img src="./images/icon-ellipsis.svg" alt="" />
+							<button class="cardButton">
+								<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+								</svg>
+							</button>
 						</div>
 						<div class="data">
 							<h3>${category.timeframes[timeframe].current}hrs</h3>

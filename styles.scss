@@ -129,6 +129,7 @@ body {
 				font-weight: var(--fw-regular);
 				text-decoration: none;
 				color: var(--clr-neutral-blue-desat);
+				transition: color 300ms ease-in-out;
 
 				&:hover,
 				&:focus {
@@ -184,9 +185,15 @@ body {
 				padding: 1.75rem 1.5rem;
 				background-color: var(--clr-neutral-blue-dark);
 				border-radius: 15px 15px 13px 13px;
+				transition: background-color 300ms ease-in-out;
 
 				@media (min-width: 54.375em) {
 					padding: 1.8125rem 1.875rem 2rem;
+				}
+
+				&:hover:not(:has(button:hover)) {
+					background-color: var(--clr-neutral-blue-hover);
+					cursor: pointer;
 				}
 
 				.category {
@@ -205,35 +212,52 @@ body {
 						line-height: 1.2223;
 						color: var(--clr-neutral-white);
 					}
-				}
 
-				.data {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
+					.cardButton {
+						background-color: transparent;
+						border: none;
+						cursor: pointer;
 
-					@media (min-width: 54.375em) {
-						flex-direction: column;
-						align-items: flex-start;
-						gap: 0.5rem;
-					}
+						path {
+							fill: var(--clr-neutral-blue-pale);
+							transition: fill 300ms ease-in-out;
+						}
 
-					h3 {
-						font-size: var(--fs-h3-sm);
-						font-weight: var(--fw-light);
-						line-height: 1.1875;
-						color: var(--clr-neutral-white);
-
-						@media (min-width: 54.375em) {
-							font-size: var(--fs-h3-lg);
+						&:hover {
+							path {
+								fill: var(--clr-neutral-white);
+							}
 						}
 					}
+				}
+			}
 
-					p {
-						font-size: var(--fs-p-md);
-						font-weight: var(--fw-regular);
-						color: var(--clr-neutral-blue-pale);
+			.data {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@media (min-width: 54.375em) {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.5rem;
+				}
+
+				h3 {
+					font-size: var(--fs-h3-sm);
+					font-weight: var(--fw-light);
+					line-height: 1.1875;
+					color: var(--clr-neutral-white);
+
+					@media (min-width: 54.375em) {
+						font-size: var(--fs-h3-lg);
 					}
+				}
+
+				p {
+					font-size: var(--fs-p-md);
+					font-weight: var(--fw-regular);
+					color: var(--clr-neutral-blue-pale);
 				}
 			}
 		}

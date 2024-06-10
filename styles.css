@@ -10,6 +10,7 @@
   --clr-neutral-blue-veryDark: hsl(226, 43%, 10%);
   --clr-neutral-blue-dark: hsl(235, 46%, 20%);
   --clr-neutral-blue-desat: hsl(235, 45%, 61%);
+  --clr-neutral-blue-hover: hsl(235, 41%, 34%);
   --clr-neutral-blue-pale: hsl(236, 100%, 87%);
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-shadow-black: hsla(0, 0%, 0%, 0.25);
@@ -240,6 +241,7 @@ body main {
   font-weight: var(--fw-regular);
   text-decoration: none;
   color: var(--clr-neutral-blue-desat);
+  transition: color 300ms ease-in-out;
 }
 .dashboard .user .tablist .tab:hover, .dashboard .user .tablist .tab:focus {
   color: var(--clr-neutral-white);
@@ -293,11 +295,16 @@ body main {
   padding: 1.75rem 1.5rem;
   background-color: var(--clr-neutral-blue-dark);
   border-radius: 15px 15px 13px 13px;
+  transition: background-color 300ms ease-in-out;
 }
 @media (min-width: 54.375em) {
   .dashboard .cards .card .content {
     padding: 1.8125rem 1.875rem 2rem;
   }
+}
+.dashboard .cards .card .content:hover:not(:has(button:hover)) {
+  background-color: var(--clr-neutral-blue-hover);
+  cursor: pointer;
 }
 .dashboard .cards .card .content .category {
   margin-bottom: 0.375rem;
@@ -316,30 +323,42 @@ body main {
   line-height: 1.2223;
   color: var(--clr-neutral-white);
 }
-.dashboard .cards .card .content .data {
+.dashboard .cards .card .content .category .cardButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.dashboard .cards .card .content .category .cardButton path {
+  fill: var(--clr-neutral-blue-pale);
+  transition: fill 300ms ease-in-out;
+}
+.dashboard .cards .card .content .category .cardButton:hover path {
+  fill: var(--clr-neutral-white);
+}
+.dashboard .cards .card .data {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (min-width: 54.375em) {
-  .dashboard .cards .card .content .data {
+  .dashboard .cards .card .data {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 }
-.dashboard .cards .card .content .data h3 {
+.dashboard .cards .card .data h3 {
   font-size: var(--fs-h3-sm);
   font-weight: var(--fw-light);
   line-height: 1.1875;
   color: var(--clr-neutral-white);
 }
 @media (min-width: 54.375em) {
-  .dashboard .cards .card .content .data h3 {
+  .dashboard .cards .card .data h3 {
     font-size: var(--fs-h3-lg);
   }
 }
-.dashboard .cards .card .content .data p {
+.dashboard .cards .card .data p {
   font-size: var(--fs-p-md);
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-blue-pale);
