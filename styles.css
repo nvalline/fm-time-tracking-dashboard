@@ -191,7 +191,7 @@ body main {
 .dashboard .user .profile img {
   height: 64px;
   width: 64px;
-  border: 3px solid var(--clr-neutral-white);
+  outline: 3px solid var(--clr-neutral-white);
   border-radius: 100%;
 }
 @media (min-width: 54.375em) {
