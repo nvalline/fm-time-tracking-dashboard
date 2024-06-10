@@ -210,6 +210,7 @@ body main {
 .dashboard .user .profile div h1 {
   font-size: var(--fs-h1-sm);
   font-weight: var(--fw-light);
+  line-height: 1.1875;
   color: var(--clr-neutral-white);
 }
 @media (min-width: 54.375em) {
